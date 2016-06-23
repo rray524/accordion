@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Accordion with CSS3</title>
+    <style type="text/css">
+        .my_gig {
+            text-align: center;
+            width: 100%;
+        }
+        
+        body {
+            margin: 0px auto;
+            padding: 0px;
+            text-align: center;
+            font-family: helvetica;
+            color: white;
+        }
+        
+        .acco-container {
+            width: 50%;
+            margin: 10px auto 30px auto;
+        }
+        
+        .acco-container label {
+            padding: 5px 20px;
+            position: relative;
+            z-index: 20;
+            display: block;
+            height: 30px;
+            cursor: pointer;
+            color: #777;
+            line-height: 33px;
+            font-size: 16px;
+            background: rgba(240, 240, 240, 1);
+            background: #E9E9F7;
+            border: 1px solid #c5c5c5;
+        }
+        
+        .acco-container label:hover {
+            background: #da0da3;
+            color: #fff;
+        }
+        
+        .acco-container input:checked + label,
+        .acco-container input:checked + label:hover {
+            background: #AF0E84;
+            color: #FFF;
+            box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .acco-container label:hover:after,
+        .acco-container input:checked + label:hover:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 13px;
+            top: 7px;
+            background: transparent url(down-arrow.png) no-repeat center center;
+        }
+        
+        .acco-container input:checked + label:hover:after {
+            background-image: url(up-arrow.png);
+        }
+        
+        .acco-container input {
+            display: none;
+        }
+        
+        .acco-container input:checked ~ article.acco-height {
+            height: 150px;
+        }
+        
+        .acco-container article {
+            background: #fff;
+            margin-top: -1px;
+            overflow: hidden;
+            height: 0px;
+            position: relative;
+            z-index: 10;
+            transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+        }
+        
+        .acco-container input:checked ~ article {
+            transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+            box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3);
+        }
+        
+        .acco-container article p {
+            font-style: italic;
+            color: #777;
+            line-height: 23px;
+            font-size: 14px;
+            padding: 20px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="acco-container">
+        <div>
+            <input id="acco-1" name="accordion-1" type="radio" />
+            <label for="acco-1">Section One</label>
+            <article class="acco-height">
+                <p>This is the dummy text for accordion with only css3. Easy way to create an accordion with pure css3 for you web pages </p>
+            </article>
+        </div>
+        <div>
+            <input id="acco-2" name="accordion-1" type="radio" />
+            <label for="acco-2">Section Two</label>
+            <article class="acco-height">
+                <p>This is the dummy text for accordion with only css3. Easy way to create an accordion with pure css3 for you web pages</p>
+            </article>
+        </div>
+        <div>
+            <input id="acco-3" name="accordion-1" type="radio" />
+            <label for="acco-3">Section Three</label>
+            <article class="acco-height">
+                <p>This is the dummy text for accordion with only css3. Easy way to create an accordion with pure css3 for you web pages</p>
+            </article>
+        </div>
+        <div>
+            <input id="acco-4" name="accordion-1" type="radio" />
+            <label for="acco-4">Section Four</label>
+            <article class="acco-height">
+                <p>This is the dummy text for accordion with only css3. Easy way to create an accordion with pure css3 for you web pages</p>
+            </article>
+        </div>
+        <div>
+            <input id="acco-5" name="accordion-1" type="radio" />
+            <label for="acco-5">Section Five</label>
+            <article class="acco-height">
+                <p>This is the dummy text for accordion with only css3. Easy way to create an accordion with pure css3 for you web pages</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="my_gig">
+        <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
+            <a itemprop='url' href=https://www.fiverr.com/rahulray923 rel="nofollow" target="_blank" style='display: inline-block;'>
+                <div class='fiverr-seller-content' id='fiverr-seller-widget-content-9a3d0014-cc75-4baf-a18b-7017b54e913d' itemprop='contentURL' style='display: none;'></div>
+                <div id='fiverr-widget-seller-data' style='display: none;'>
+                    <div itemprop='name'>rahulray923</div>
+                    <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
+                    <div itemprop='jobtitle'>Seller</div>
+                    <div itemprop='description'>I never say NO to anything just because that is something I dont know. I always say YES and learn how to do that. If you hire me, I will never disappoint you. I stick to my commitment and know multiple languages. I am very comfortable with calls, gadgets and staying connected. I am OPEN to work. </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script id='fiverr-seller-widget-script-9a3d0014-cc75-4baf-a18b-7017b54e913d' src='https://widgets.fiverr.com/api/v1/seller/rahulray923?widget_id=9a3d0014-cc75-4baf-a18b-7017b54e913d' data-config='{"category_name":"Programming & Tech"}' async='true' defer='true'></script>
+
+</body>
+
+</html>
